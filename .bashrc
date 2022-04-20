@@ -2,6 +2,10 @@
 # ~/.bashrc
 #
 
+# skip some lines at the start of the prompt
+echo
+echo 
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -86,5 +90,24 @@ _open_files_for_editing() {
 # alias pacdiff=eos-pacdiff
 ################################################################################
 
-echo
-echo
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/socrates/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/socrates/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/socrates/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/socrates/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+
+# dont load range's default config but the custom one in .config/ranger
+RANGER_LOAD_DEFAULT_RC=FALSE
