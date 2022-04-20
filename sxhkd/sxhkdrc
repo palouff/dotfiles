@@ -176,7 +176,7 @@ super + w
   firefox
 
 super + v
-  thunar  
+  ~/.config/bspwm/scripts/launch_ranger.sh
 
 super + F1
   ~/.config/bspwm/scripts/keybindings_rofi.sh
