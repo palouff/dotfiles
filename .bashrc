@@ -86,3 +86,5 @@ _open_files_for_editing() {
 # alias pacdiff=eos-pacdiff
 ################################################################################
 
+echo
+echo
